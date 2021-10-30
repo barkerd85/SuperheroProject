@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Hero</title>
+</head>
+<body>
+    <form action="{% url 'superheroes:edit' single_hero.id %}" method="post">
+        {% csrf_token %}
+            <li>{{single_hero.name}}</li>Edit Name: <input type="text" name="name" id="name"><br />
+            <li>{{single_hero.alter_ego}}</li>Edit Alter Ego: <input type="text" name="alter_ego" id="alter_ego"><br />
+            <li>{{single_hero.primary_ability}}</li>Edit Primary Ability: <input type="text" name="primary" id="primary"><br /> 
+            <li>{{single_hero.secondary_ability}}</li>Edit Secondary Ability: <input type="text" name="secondary" id="secondary"><br />
+            <li>{{single_hero.catch_phrase}}</li>Edit Catchphrase: <input type="text" name="catchphrase" id="catchphrase"><br />
+            <input type="submit" value="Update!">
+        </form>
+
+   
+    
+</body>
+</html>
+    
+    
